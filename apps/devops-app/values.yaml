@@ -1,20 +1,16 @@
 image:
   repository: ghcr.io/binhcandev/devops-infra
-  tag: "latest"
+  tag: "9375ae2"
   pullPolicy: Always
-
 replicaCount: 1
-
 service:
   type: ClusterIP
   port: 80
   targetPort: 8080
-
 ingress:
   enabled: true
   className: nginx
   host: devops-app.local
-
 resources:
   limits:
     cpu: 500m
@@ -22,10 +18,8 @@ resources:
   requests:
     cpu: 100m
     memory: 256Mi
-
 vault:
   enabled: false
   addr: "http://vault.vault.svc.cluster.local:8200"
   role: "devops-app"
-
 env: []
