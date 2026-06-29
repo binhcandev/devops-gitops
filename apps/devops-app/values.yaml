@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/binhcandev/devops-infra
-  tag: "64fe296"
+  tag: "a3c02c3"
   pullPolicy: Always
 replicaCount: 1
 service:
